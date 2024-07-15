@@ -25,6 +25,6 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_mintsh';
-$plugin->version = 2024010108;
+$plugin->version = 2024010109;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = ['theme_boost_union' => 2023010548];
