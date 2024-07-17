@@ -3,3 +3,42 @@
  * Add your SCSS code here.
  * It will be added on top of Boost Union's SCSS code.
  ***************************************************************/
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.round-top-left {
+  border-top-left-radius: 0;
+}
+
+.round-top-right {
+  border-top-right-radius: 0;
+}
+
+.round-bottom-left {
+  border-bottom-left-radius: 0;
+}
+
+.round-bottom-right {
+  border-bottom-right-radius: 0;
+}
+
+@include media-breakpoint-up(md) {
+  .round-top-left {
+    border-top-left-radius: 5em;
+  }
+
+  .round-top-right {
+    border-top-right-radius: 5em;
+  }
+
+  .round-bottom-left {
+    border-bottom-left-radius: 5em;
+  }
+
+  .round-bottom-right {
+    border-bottom-right-radius: 5em;
+  }
+}

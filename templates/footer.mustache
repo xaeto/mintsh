@@ -1,0 +1,34 @@
+<footer class="footer py-5 bg-dark container-xl text-light font-weight-bold round-top-left">
+    <div class="row container-xl ml-auto mr-auto px-5">
+        <div class="col-12 col-md-3 my-3">
+            <img src="{{{ footerlogo }}}" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-6 col-md-3 my-3">
+            <ul class="flex-column list-unstyled">
+                <li class="mb-2 ">Gefördert von: Staatskanzlei</li>
+                <li class="mb-2">Unterstützt von: IPN</li>
+                <li class="mb-2">Entwickelt von: FH-Kiel</li>
+            </ul>
+        </div>
+        <div class="col-6 col-md-1 offset-md-5 my-3">
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Datenschutz</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Impressum</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="row container-xl text-light">
+            <div class="col">
+                {{{ output.debug_footer_html }}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{#js}}
+    require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+    });
+{{/js}}

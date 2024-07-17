@@ -71,19 +71,19 @@ function theme_mintsh_get_pre_scss($theme) {
     // This way, we will add the pre SCSS code with the explicit use of the Boost Union configuration to the stack.
     $inheritanceconfig = get_config('theme_mintsh', 'prescssinheritance');
     if ($inheritanceconfig == THEME_MINTSH_SETTING_INHERITANCE_DUPLICATE) {
-    $scss .= theme_boost_union_get_pre_scss(theme_config::load('boost_union'));
-}
+        $scss .= theme_config::load('boost_union')->get_pre_scss_code();
+    }
 
-// And add Boost Union Child's pre SCSS file to the stack.
-$scss .= file_get_contents($CFG->dirroot . '/theme/mintsh/scss/pre.scss');
+    // And add Boost Union Child's pre SCSS file to the stack.
+    $scss .= file_get_contents($CFG->dirroot . '/theme/mintsh/scss/pre.scss');
 
-/**********************************************************
-* EXTENSION POINT:
-* Compose and add additional pre-SCSS code here.
-* It will be added on top of Boost Union's pre-SCSS code.
-*********************************************************/
+    /**********************************************************
+    * EXTENSION POINT:
+    * Compose and add additional pre-SCSS code here.
+    * It will be added on top of Boost Union's pre-SCSS code.
+    *********************************************************/
 
-return $scss;
+    return $scss;
 }
 
 /**
@@ -109,16 +109,16 @@ function theme_mintsh_get_extra_scss($theme) {
     // This way, we will add the extra SCSS code with the explicit use of the Boost Union configuration to the stack.
     $inheritanceconfig = get_config('theme_mintsh', 'extrascssinheritance');
     if ($inheritanceconfig == THEME_MINTSH_SETTING_INHERITANCE_DUPLICATE) {
-    $scss .= theme_boost_union_get_extra_scss(theme_config::load('boost_union'));
-}
+        $scss .= theme_config::load('boost_union')->get_extra_scss_code();
+    }
 
-/**********************************************************
-* EXTENSION POINT:
-* Compose and add additional SCSS code here.
-* It will be added on top of Boost Union's SCSS code.
-*********************************************************/
+    /**********************************************************
+    * EXTENSION POINT:
+    * Compose and add additional SCSS code here.
+    * It will be added on top of Boost Union's SCSS code.
+    *********************************************************/
 
-return $scss;
+    return $scss;
 }
 
 /**

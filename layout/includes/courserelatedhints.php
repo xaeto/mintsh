@@ -15,16 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Union Child - Version file
+ * Theme Boost Union - course related hints include.
  *
- * @package    theme_mintsh
- * @copyright  2024 Jon Haase <jon.haase@student.fh-kiel.de>
+ * @package    theme_boost_union
+ * @copyright  2022 Alexander Bias, lern.link GmbH <alexander.bias@lernlink.de>
+ * @copyright  on behalf of Zurich University of Applied Sciences (ZHAW)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'theme_mintsh';
-$plugin->version = 2024010105;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = ['theme_boost_union' => 2023010548];
+// Get and use the course related hints HTML code, if any hints are configured.
+$courserelatedhintshtml = theme_boost_union_get_course_related_hints();
+if ($courserelatedhintshtml) {
+    $templatecontext['courserelatedhints'] = $courserelatedhintshtml;
+}

@@ -22,9 +22,24 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+namespace theme_mintsh\privacy;
 
-$plugin->component = 'theme_mintsh';
-$plugin->version = 2024010105;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = ['theme_boost_union' => 2023010548];
+/**
+ * Privacy Subsystem implementing null_provider.
+ *
+ * @package    theme_boost_union_child
+ * @copyright  2023 Daniel Poggenpohl <daniel.poggenpohl@fernuni-hagen.de> and Alexander Bias <bias@alexanderbias.de>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return string
+     */
+    public static function get_reason(): string {
+        return 'privacy:metadata';
+    }
+}

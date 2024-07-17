@@ -3,3 +3,150 @@
  * Add your Pre-SCSS code here.
  * It will be added on top of Boost Union's Pre-SCSS code.
  ***************************************************************/
+
+$mintsh-green: #72b158;
+$mintsh-teal: #438a8e;
+$mintsh-blue: #2f4c6b;
+
+//Poppins-Black.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Black.ttf") format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+//Poppins-BlackItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-BlackItalic.ttf") format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+//Poppins-Bold.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Bold.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+//Poppins-BoldItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-BoldItalic.ttf") format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+//Poppins-ExtraBold.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-ExtraBold.ttf") format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+//Poppins-ExtraBoldItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-ExtraBoldItalic.ttf") format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+//Poppins-ExtraLight.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-ExtraLight.ttf") format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+//Poppins-ExtraLightItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-ExtraLightItalic.ttf") format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+//Poppins-Italic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Italic.ttf") format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+//Poppins-Light.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Light.ttf") format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+//Poppins-LightItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-LightItalic.ttf") format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+//Poppins-Medium.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Medium.ttf") format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+//Poppins-MediumItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-MediumItalic.ttf") format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+//Poppins-Regular.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Regular.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+//Poppins-SemiBold.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-SemiBold.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+//Poppins-SemiBoldItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-SemiBoldItalic.ttf") format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+//Poppins-Thin.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Thin.ttf") format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+//Poppins-ThinItalic.ttf
+@font-face {
+  font-family: 'Poppins';
+  src: url("http://localhost/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-ThinItalic.ttf") format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+// redefine colors
+$primary: $mintsh-blue;
+$secondary: $mintsh-teal;
+$accent: $mintsh-green;
+
+$secondary-light: #8bbec1;
+
+$theme-colors: (
+        "primary": $mintsh-blue,
+        "secondary": $mintsh-teal,
+        "accent": $mintsh-green,
+);
+
+// redefine fonts
+$font-family-base: 'Poppins';

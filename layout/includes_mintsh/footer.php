@@ -15,16 +15,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Union Child - Version file
+ * Theme Boost Union - Footer question mark button layout include.
  *
  * @package    theme_mintsh
- * @copyright  2024 Jon Haase <jon.haase@student.fh-kiel.de>
+ * @copyright  2023 Jon Haase <jon.haase@student.fh-kiel.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'theme_mintsh';
-$plugin->version = 2024010105;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = ['theme_boost_union' => 2023010548];
+$templatecontext['footerlogo'] = $OUTPUT->image_url('mintsh_logo_wide_transparent', "theme");

@@ -15,16 +15,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Union Child - Version file
+ * Theme Boost Union - scrollspy include.
  *
- * @package    theme_mintsh
- * @copyright  2024 Jon Haase <jon.haase@student.fh-kiel.de>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   theme_boost_union
+ * @copyright 2022 Josha Bartsch <bartsch@itc.rwth-aachen.de>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'theme_mintsh';
-$plugin->version = 2024010105;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = ['theme_boost_union' => 2023010548];
+$scrollspy = get_config('theme_boost_union', 'scrollspy');
+
+// Add scroll-spy AMD module if we are on a course page (but not the frontpage) and the feature is enabled.
+if ($PAGE->pagelayout == 'course' && $PAGE->course->id != SITEID &&
+        $scrollspy == THEME_BOOST_UNION_SETTING_SELECT_YES) {
+    $PAGE->requires->js_call_amd('theme_boost_union/scrollspy', 'init');
+}
